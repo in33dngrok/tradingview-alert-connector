@@ -27,9 +27,7 @@ const dataStore = '0xFD70de6b91282D8017aA4E741e9Ae325CAb992d8';
 const orderVault = '0x31eF83a530Fde1B38EE9A18093A333D8Bbbc40D5';
 const usdc = '0xaf88d065e77c8cC2239327C5EDb3A432268e5831';
 const usdcDecimal = 6;
-const myReferralCode =
-	'0x74765f616c6572745f636f6e6e6563746f720000000000000000000000000000';
-
+const myReferralCode = ethers.constants.HashZero
 const signer = getGmxClient();
 
 export const gmxCreateOrder = async (orderParams: gmxOrderParams) => {
