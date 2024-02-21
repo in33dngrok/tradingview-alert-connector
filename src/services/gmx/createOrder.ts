@@ -1,5 +1,5 @@
 import { AlertObject } from './../../types';
-import { ExchangeRouterAbi } from './abi/exchangeRounter';
+import { ExchangeRouterAbi } from './abi/exchangeRouter';
 import { ethers } from 'ethers';
 import {
 	GmxPositionResponse,
@@ -19,7 +19,7 @@ import {
 import { _sleep } from '../../helper';
 import axios from 'axios';
 
-const exchangeRounter = '0x7C68C7866A64FA2160F78EEaE12217FFbf871fa8';
+const exchangeRouter = '0x7C68C7866A64FA2160F78EEaE12217FFbf871fa8';
 const transferRouter = '0x7452c558d45f8afC8c83dAe62C3f8A5BE19c71f6';
 const reader = '0xf60becbba223eea9495da3f606753867ec10d139';
 const dataStore = '0xFD70de6b91282D8017aA4E741e9Ae325CAb992d8';
@@ -33,7 +33,7 @@ const signer = getGmxClient();
 export const gmxCreateOrder = async (orderParams: gmxOrderParams) => {
 	try {
 		const gmxContract = new ethers.Contract(
-			exchangeRounter,
+			exchangeRouter,
 			ExchangeRouterAbi,
 			signer
 		);
